@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var artistsController = require('../controllers/artists.js');
 var managersController = require('../controllers/managers.js');
+const songsController = require('../controllers/songs.js');
 
 //Artist Routes
   
@@ -38,5 +39,11 @@ router.put('/api/managers/:id', managersController.update);
 router.delete('/api/managers/:id', managersController.destroy);
 
 //Song Routes
+router.get('/api/songs', songsController.index);
+router.post('/api/songs', songsController.create);
+router.get('/api/songs/:id', songsController.show);
+router.put('/api/songs/:id', songsController.update);
+router.delete('/api/songs/:id', songsController.destroy);
+
 
 module.exports = router;
