@@ -13,7 +13,7 @@ export class ManagerIndexComponent implements OnInit {
 	deleteManager(deletedManager){
 		this.managersService.deleteManager(deletedManager).subscribe(response => {
 			console.log('DELETING!!!!');
-			console.log(response.json());
+			console.log(response);
 			let managerIndex = this.allManagers.indexOf(deletedManager);
 			this.allManagers.splice(managerIndex, 1);
 		})
