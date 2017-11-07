@@ -6,6 +6,8 @@ import { ManagersRoutingModule } from './managers/manager-routing.module';
 import { ArtistsModule } from './artists/artists.module';
 import { ManagersModule } from './managers/managers.module';
 import { HttpModule } from '@angular/http';
+import { SongsModule } from './songs/songs.module';
+import { SongsRoutingModule } from './songs/songs-routing.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -24,7 +26,9 @@ import { AboutComponent } from './about/about.component';
     ArtistsModule,
     ManagersRoutingModule,
     ManagersModule,
-    HttpModule
+    HttpModule,
+    SongsModule,
+    SongsRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
