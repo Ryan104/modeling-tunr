@@ -22,14 +22,12 @@
         <h3>{{manager.cell_phone_number}}</h3>
       </li>
       <li>
-        <a routerLink="/managers/{{manager.id}}/edit">
+        <a routerLink="/managers/edit/{{manager.id}}">
           Edit
         </a>
       </li>
       <li>
-        <form (ngSubmit)="deleteManager(manager)">
-          <input type="submit" value="Delete"/>
-        </form>
+        <button (click)='deleteManager(manager)'>Delete</button>
       </li>
     </ul>
   </div>

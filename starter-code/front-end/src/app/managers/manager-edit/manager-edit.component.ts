@@ -15,8 +15,9 @@ export class ManagerEditComponent implements OnInit {
 		console.log(updatedManager);
 		this.managersService.updateManager(updatedManager).subscribe(response => {
 			console.log(response.json());
-			this.updateManager = response.json();
-			this.router.navigate([`/managers/${updatedManager.id}`]);
+			let manager = response.json();
+			this.router.navigate([`/managers/${manager.id}`]);
+
 		})
 	}
 

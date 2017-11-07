@@ -15,7 +15,7 @@ export class ManagerShowComponent implements OnInit {
 
   ngOnInit() {
   	this.route.paramMap.subscribe(params => {
-  		let id = +params.get('id');
+  		let id = Number(params.get('id'));
   		this.managersService.getOneManager(id).subscribe(response => {
   			console.log(response.json());
   			this.oneManager = response.json();
